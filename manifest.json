@@ -1,0 +1,11 @@
+{
+  "short_name": "Magic",
+  "id": "2300",
+  "description": "It will add 1 with each number everytime",
+  "name": "MagicCalculator",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "share_target": {
+    "method": "GET"
+  }
+}
