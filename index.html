@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced Calculator</title>
+
+    <!-- Link to manifest.json -->
+    <link rel="manifest" href="manifest.json">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -109,12 +113,10 @@
 
         function calculateResult() {
             try {
-                // Match numbers (including decimals) in the expression
                 let modifiedExpression = display.value.replace(/\d+(\.\d+)?/g, (match) => {
-                    return parseFloat(match) + 1; // Convert to number, add 1, and replace
+                    return parseFloat(match) + 1;
                 });
 
-                // Evaluate the modified expression
                 display.value = eval(modifiedExpression);
             } catch (error) {
                 alert("Invalid Input");
@@ -122,7 +124,6 @@
             }
         }
 
-        // Enable keyboard input
         document.addEventListener("keydown", function(event) {
             if ((event.key >= 0 && event.key <= 9) || "+-*/().".includes(event.key)) {
                 appendToDisplay(event.key);
